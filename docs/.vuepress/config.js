@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: '/VisionGalDoc/',
 
   lang: 'en-US',
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  title: 'VisionGalDoc',
+  description: 'A documentation site for VisionGal',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
