@@ -3,8 +3,9 @@ import { defineUserConfig } from 'vuepress'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  lang: 'en-US',
+  base: '/VisionGalDoc/',
 
+  lang: 'en-US',
   title: 'VuePress',
   description: 'My first VuePress Site',
 
