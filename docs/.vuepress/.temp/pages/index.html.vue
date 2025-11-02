@@ -1,4 +1,4 @@
-<template><div><p>This is the content of home page. Check <a href="https://vuejs.press/reference/default-theme/frontmatter.html#home-page" target="_blank" rel="noopener noreferrer">Home Page Docs</a> for more details.</p>
+<template><div><p>这是 VisionGal 引擎的主页，你可以在上面找到文档、介绍、Github 等信息。</p>
 </div></template>
 
 

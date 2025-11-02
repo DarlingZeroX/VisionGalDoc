@@ -5,14 +5,14 @@ import { webpackBundler } from '@vuepress/bundler-webpack'
 export default defineUserConfig({
   base: '/VisionGalDoc/',
 
-  lang: 'en-US',
-  title: 'VisionGalDoc',
-  description: 'A documentation site for VisionGal',
+  lang: 'zh-CN',
+  title: 'VisionGal 引擎',
+  description: ' ',
 
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
-
+    logo: '/icons/vg.png',
     navbar: ['/', '/get-started'],
+    //sidebarDepth: 3,   确保显示四级标题
   }),
 
   bundler: webpackBundler(),
