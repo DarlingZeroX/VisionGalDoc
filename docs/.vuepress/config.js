@@ -11,7 +11,7 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: '/icons/vg.png',
-    navbar: ['/', '/get-started'],
+    navbar: ['/', '/get-started', '/api-documentation'],
     //sidebarDepth: 3,   确保显示四级标题
   }),
 

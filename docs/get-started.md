@@ -1,9 +1,11 @@
 # 快速开始
+![visiongal](/VisionGalDoc/icons/visiongal.png)
 
 ## 介绍
 VisionGal 是一个功能强大的视觉小说引擎，专为创建高质量视觉小说和交互式叙事体验而设计。引擎采用 C++ 开发，剧情脚本使用Lua进行编写，具有良好的跨平台性和可扩展性。
 
-![visiongal](/icons/visiongal.png)
+![screenshot1](/VisionGalDoc/screenshot/screenshot1.png)
+![screenshot1](/VisionGalDoc/screenshot/screenshot2.png)
 
 ### 功能特点
 - 可视化编辑器：提供完善的可视化编辑器，支持实时预览编辑效果，方便创作和管理视觉小说内容
@@ -343,17 +345,17 @@ return function()
     GalGame:显示背景('图片/背景/教室背景.png')
     梦女:说('测试开始')
 
-    GalGame:自定义图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
+    GalGame:图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
     GalGame:显示背景('图片/背景/走廊背景1.png')
     梦女:说('当前转场测试：图片/转场/WIP_BLTR')
 
-    GalGame:自定义图片转场命令('背景','图片/转场/WIP_BRTL.png','2.0')
+    GalGame:图片转场命令('背景','图片/转场/WIP_BRTL.png','2.0')
     GalGame:显示背景('图片/背景/学校操场.png')
     梦女:说('当前转场测试：图片/转场/WIP_BLTR')
     return
 end
 ```
-- 使用 `GalGame:自定义图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')` 来自定义转场图片。  
+- 使用 `GalGame:图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')` 来自定义图片转场。  
   其中的 `背景` 是转场的目标 
   其中的 `图片/转场/WIP_BLTR.png` 是自定义的转场图片路径  
   其中的 `2.0` 是转场时间，单位是秒。你可以根据需要调整转场时间。
@@ -386,7 +388,7 @@ return function()
     GalGame:显示背景('图片/背景/教室背景.png')
     梦女:说('测试开始')
 
-    GalGame:自定义图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
+    GalGame:图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
     GalGame:显示背景('图片/背景/走廊背景1.png')
 
     梦女:说('当前转场测试：在背景层进行转场，不影响立绘')
@@ -422,7 +424,7 @@ return function()
     GalGame:显示背景('图片/背景/教室背景.png')
     梦女:说('测试开始')
 
-    GalGame:自定义图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
+    GalGame:图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
     GalGame:显示背景('图片/背景/走廊背景1.png')
     梦女:说('当前转场测试：在背景层进行转场，不影响立绘')
 
@@ -465,17 +467,17 @@ return function()
     GalGame:显示背景('图片/背景/教室背景.png')
     梦女:说('测试开始')
 
-    GalGame:自定义图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
+    GalGame:图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')
     local 红色 = float4.new(1.0, 0.0, 0.0, 1.0)
     GalGame:显示背景(红色)
     梦女:说('当前测试：在背景层显示红色')
 
-    GalGame:自定义图片转场命令('前景','图片/转场/WIP_BLTR.png','2.0')
+    GalGame:图片转场命令('前景','图片/转场/WIP_BLTR.png','2.0')
     local 绿色 = float4.new(0.0, 1.0, 0.0, 1.0)
     GalGame:显示前景(绿色)
     梦女:说('当前测试：在前景层显示绿色')
 
-    GalGame:自定义图片转场命令('屏幕','图片/转场/WIP_BLTR.png','2.0')
+    GalGame:图片转场命令('屏幕','图片/转场/WIP_BLTR.png','2.0')
     local 蓝色 = float4.new(0.0, 0.0, 1.0, 1.0)
     GalGame:显示屏幕(蓝色)
     梦女:说('当前测试：在屏幕层显示蓝色')

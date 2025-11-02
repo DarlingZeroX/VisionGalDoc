@@ -1,7 +1,9 @@
 <template><div><h1 id="快速开始" tabindex="-1"><a class="header-anchor" href="#快速开始"><span>快速开始</span></a></h1>
+<p><img src="/VisionGalDoc/icons/visiongal.png" alt="visiongal"></p>
 <h2 id="介绍" tabindex="-1"><a class="header-anchor" href="#介绍"><span>介绍</span></a></h2>
 <p>VisionGal 是一个功能强大的视觉小说引擎，专为创建高质量视觉小说和交互式叙事体验而设计。引擎采用 C++ 开发，剧情脚本使用Lua进行编写，具有良好的跨平台性和可扩展性。</p>
-<p><img src="/icons/visiongal.png" alt="visiongal"></p>
+<p><img src="/VisionGalDoc/screenshot/screenshot1.png" alt="screenshot1">
+<img src="/VisionGalDoc/screenshot/screenshot2.png" alt="screenshot1"></p>
 <h3 id="功能特点" tabindex="-1"><a class="header-anchor" href="#功能特点"><span>功能特点</span></a></h3>
 <ul>
 <li>可视化编辑器：提供完善的可视化编辑器，支持实时预览编辑效果，方便创作和管理视觉小说内容</li>
@@ -318,18 +320,18 @@
 <span class="line">    GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/教室背景.png'</span><span class="token punctuation">)</span></span>
 <span class="line">    梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'测试开始'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">    GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">    GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">    GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/走廊背景1.png'</span><span class="token punctuation">)</span></span>
 <span class="line">    梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前转场测试：图片/转场/WIP_BLTR'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">    GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BRTL.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">    GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BRTL.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">    GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/学校操场.png'</span><span class="token punctuation">)</span></span>
 <span class="line">    梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前转场测试：图片/转场/WIP_BLTR'</span><span class="token punctuation">)</span></span>
 <span class="line">    <span class="token keyword">return</span></span>
 <span class="line"><span class="token keyword">end</span></span>
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>使用 <code v-pre>GalGame:自定义图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')</code> 来自定义转场图片。<br>
+<li>使用 <code v-pre>GalGame:图片转场命令('背景','图片/转场/WIP_BLTR.png','2.0')</code> 来自定义图片转场。<br>
 其中的 <code v-pre>背景</code> 是转场的目标
 其中的 <code v-pre>图片/转场/WIP_BLTR.png</code> 是自定义的转场图片路径<br>
 其中的 <code v-pre>2.0</code> 是转场时间，单位是秒。你可以根据需要调整转场时间。</li>
@@ -362,7 +364,7 @@
 <span class="line">   GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/教室背景.png'</span><span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'测试开始'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">   GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">   GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">   GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/走廊背景1.png'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前转场测试：在背景层进行转场，不影响立绘'</span><span class="token punctuation">)</span></span>
@@ -398,7 +400,7 @@
 <span class="line">   GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/教室背景.png'</span><span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'测试开始'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">   GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">   GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">   GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/走廊背景1.png'</span><span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前转场测试：在背景层进行转场，不影响立绘'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
@@ -441,17 +443,17 @@
 <span class="line">   GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span><span class="token string">'图片/背景/教室背景.png'</span><span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'测试开始'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">   GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">   GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'背景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">   <span class="token keyword">local</span> 红色 <span class="token operator">=</span> float4<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span></span>
 <span class="line">   GalGame<span class="token punctuation">:</span>显示背景<span class="token punctuation">(</span>红色<span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前测试：在背景层显示红色'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">   GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'前景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">   GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'前景'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">   <span class="token keyword">local</span> 绿色 <span class="token operator">=</span> float4<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span></span>
 <span class="line">   GalGame<span class="token punctuation">:</span>显示前景<span class="token punctuation">(</span>绿色<span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前测试：在前景层显示绿色'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
-<span class="line">   GalGame<span class="token punctuation">:</span>自定义图片转场命令<span class="token punctuation">(</span><span class="token string">'屏幕'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
+<span class="line">   GalGame<span class="token punctuation">:</span>图片转场命令<span class="token punctuation">(</span><span class="token string">'屏幕'</span><span class="token punctuation">,</span><span class="token string">'图片/转场/WIP_BLTR.png'</span><span class="token punctuation">,</span><span class="token string">'2.0'</span><span class="token punctuation">)</span></span>
 <span class="line">   <span class="token keyword">local</span> 蓝色 <span class="token operator">=</span> float4<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span></span>
 <span class="line">   GalGame<span class="token punctuation">:</span>显示屏幕<span class="token punctuation">(</span>蓝色<span class="token punctuation">)</span></span>
 <span class="line">   梦女<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'当前测试：在屏幕层显示蓝色'</span><span class="token punctuation">)</span></span>
