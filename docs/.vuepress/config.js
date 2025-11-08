@@ -12,6 +12,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: '/icons/vg.png',
     navbar: ['/', '/get-started', '/api-documentation'],
+    // , '/galgamelua-api-documentation', '/gamelua-api-documentation'
     //sidebarDepth: 3,   确保显示四级标题
   }),
 
