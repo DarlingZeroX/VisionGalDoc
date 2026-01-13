@@ -580,13 +580,13 @@
 <span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是一个Galgame游戏脚本初始化模版'</span><span class="token punctuation">)</span></span>
 <span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你可以在这里添加剧情内容'</span><span class="token punctuation">)</span></span>
 <span class="line">  VG<span class="token punctuation">:</span>文本输入<span class="token punctuation">(</span><span class="token string">'输入1'</span><span class="token punctuation">,</span><span class="token string">"输入标题"</span><span class="token punctuation">,</span><span class="token string">'按钮文本'</span><span class="token punctuation">)</span></span>
-<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你输入的内容是：'</span> <span class="token operator">..</span> VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>玩家输入<span class="token punctuation">.</span>输入<span class="token number">1</span><span class="token punctuation">)</span></span>
+<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你输入的内容是：'</span> <span class="token operator">..</span> VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>文本输入<span class="token punctuation">.</span>输入<span class="token number">1</span><span class="token punctuation">)</span></span>
 <span class="line">  <span class="token keyword">return</span></span>
 <span class="line"><span class="token keyword">end</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过 <code v-pre>VG.存档数据.玩家输入</code> 这个特定的命名空间可以访问读取玩家输入的结果</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过 <code v-pre>VG.存档数据.文本输入</code> 这个特定的命名空间可以访问读取文本输入的结果</p>
 <ul>
-<li>通过 <code v-pre>VG.存档数据.玩家输入.输入1</code> 可以访问<code v-pre>VG:获取输入('输入1',&quot;输入标题&quot;,'按钮文本')</code>的输入结果</li>
+<li>通过 <code v-pre>VG.存档数据.文本输入.输入1</code> 可以访问<code v-pre>VG:获取输入('输入1',&quot;输入标题&quot;,'按钮文本')</code>的输入结果</li>
 </ul>
 </div></template>
 
