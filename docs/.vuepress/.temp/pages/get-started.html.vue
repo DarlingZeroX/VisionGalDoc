@@ -573,7 +573,7 @@
 <ul>
 <li>通过 <code v-pre>VG.存档数据.剧情选择.分支1</code> 可以访问分支1的选择结果</li>
 </ul>
-<h4 id="读取玩家输入结果" tabindex="-1"><a class="header-anchor" href="#读取玩家输入结果"><span>读取玩家输入结果</span></a></h4>
+<h4 id="读取文本输入结果" tabindex="-1"><a class="header-anchor" href="#读取文本输入结果"><span>读取文本输入结果</span></a></h4>
 <div class="language-lua line-numbers-mode" data-highlighter="prismjs" data-ext="lua"><pre v-pre><code><span class="line"><span class="token keyword">local</span> 梦旅 <span class="token operator">=</span> VG<span class="token punctuation">:</span>创建人物<span class="token punctuation">(</span><span class="token string">'梦旅'</span><span class="token punctuation">)</span></span>
 <span class="line"></span>
 <span class="line"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
