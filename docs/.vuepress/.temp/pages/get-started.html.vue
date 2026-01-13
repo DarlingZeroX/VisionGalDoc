@@ -515,17 +515,17 @@
 <span class="line"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
 <span class="line">   梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是一个Galgame游戏脚本初始化模版'</span><span class="token punctuation">)</span></span>
 <span class="line">   梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你可以在这里添加剧情内容'</span><span class="token punctuation">)</span></span>
-<span class="line">   输入文本 <span class="token operator">=</span> VG<span class="token punctuation">:</span>获取输入<span class="token punctuation">(</span><span class="token string">'输入1'</span><span class="token punctuation">,</span><span class="token string">"输入标题"</span><span class="token punctuation">,</span><span class="token string">'按钮文本'</span><span class="token punctuation">)</span></span>
+<span class="line">   输入文本 <span class="token operator">=</span> VG<span class="token punctuation">:</span>文本输入<span class="token punctuation">(</span><span class="token string">'输入1'</span><span class="token punctuation">,</span><span class="token string">"输入标题"</span><span class="token punctuation">,</span><span class="token string">'按钮文本'</span><span class="token punctuation">)</span></span>
 <span class="line">   梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你输入的内容是：'</span> <span class="token operator">..</span> 输入文本<span class="token punctuation">)</span></span>
 <span class="line">   <span class="token keyword">return</span></span>
 <span class="line"><span class="token keyword">end</span></span>
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>使用 <code v-pre>VG:获取输入( 输入框名称, 输入框标题, 按钮文本 )</code> 可以获取玩家在输入框中输入的文本。</li>
+<li>使用 <code v-pre>VG:文本输入( 输入框名称, 输入框标题, 按钮文本 )</code> 可以获取玩家在输入框中输入的文本。</li>
 <li><code v-pre>输入框名称</code> 是唯一的，用于标识不同的输入框。</li>
 <li><code v-pre>输入框标题</code> 是显示在输入框上方的标题文本。</li>
 <li><code v-pre>按钮文本</code> 是显示在输入框下方的按钮文本。</li>
-<li><code v-pre>VG:获取输入()</code> 返回玩家在输入框中输入的文本。</li>
+<li><code v-pre>VG:文本输入()</code> 返回玩家在输入框中输入的文本。</li>
 </ul>
 <h3 id="存档数据读写" tabindex="-1"><a class="header-anchor" href="#存档数据读写"><span>存档数据读写</span></a></h3>
 <h4 id="剧情脚本数据传递" tabindex="-1"><a class="header-anchor" href="#剧情脚本数据传递"><span>剧情脚本数据传递</span></a></h4>
@@ -579,7 +579,7 @@
 <span class="line"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
 <span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是一个Galgame游戏脚本初始化模版'</span><span class="token punctuation">)</span></span>
 <span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你可以在这里添加剧情内容'</span><span class="token punctuation">)</span></span>
-<span class="line">  VG<span class="token punctuation">:</span>获取输入<span class="token punctuation">(</span><span class="token string">'输入1'</span><span class="token punctuation">,</span><span class="token string">"输入标题"</span><span class="token punctuation">,</span><span class="token string">'按钮文本'</span><span class="token punctuation">)</span></span>
+<span class="line">  VG<span class="token punctuation">:</span>文本输入<span class="token punctuation">(</span><span class="token string">'输入1'</span><span class="token punctuation">,</span><span class="token string">"输入标题"</span><span class="token punctuation">,</span><span class="token string">'按钮文本'</span><span class="token punctuation">)</span></span>
 <span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你输入的内容是：'</span> <span class="token operator">..</span> VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>玩家输入<span class="token punctuation">.</span>输入<span class="token number">1</span><span class="token punctuation">)</span></span>
 <span class="line">  <span class="token keyword">return</span></span>
 <span class="line"><span class="token keyword">end</span></span>
