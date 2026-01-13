@@ -527,6 +527,67 @@
 <li><code v-pre>按钮文本</code> 是显示在输入框下方的按钮文本。</li>
 <li><code v-pre>VG:获取输入()</code> 返回玩家在输入框中输入的文本。</li>
 </ul>
+<h3 id="存档数据读写" tabindex="-1"><a class="header-anchor" href="#存档数据读写"><span>存档数据读写</span></a></h3>
+<h4 id="剧情脚本数据传递" tabindex="-1"><a class="header-anchor" href="#剧情脚本数据传递"><span>剧情脚本数据传递</span></a></h4>
+<p>假设如下是脚本1</p>
+<div class="language-lua line-numbers-mode" data-highlighter="prismjs" data-ext="lua"><pre v-pre><code><span class="line">   <span class="token keyword">local</span> 梦旅 <span class="token operator">=</span> GalGame<span class="token punctuation">.</span>引擎<span class="token punctuation">:</span>创建人物<span class="token punctuation">(</span><span class="token string">'梦旅'</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line">   <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是脚本数据传递1'</span><span class="token punctuation">)</span></span>
+<span class="line">       梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'脚本数据传递1你可以在这里添加剧情内容'</span><span class="token punctuation">)</span></span>
+<span class="line">       VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>命名空间<span class="token number">1.</span>变量<span class="token number">1</span> <span class="token operator">=</span> <span class="token string">'VG.存档数据.命名空间1.变量1的值'</span></span>
+<span class="line">       VG<span class="token punctuation">:</span>加载剧情脚本<span class="token punctuation">(</span><span class="token string">'/assets/剧情脚本/存档数据读写/脚本数据传递2.lua'</span><span class="token punctuation">)</span></span>
+<span class="line">       <span class="token keyword">return</span></span>
+<span class="line">   <span class="token keyword">end</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>通过 <code v-pre>VG.存档数据</code> 可以访问读取和写入存档数据</li>
+<li>通过 <code v-pre>VG.存档数据.命名空间1</code> 可以访问存档数据的一个命名空间</li>
+<li>通过 <code v-pre>VG.存档数据.命名空间1.变量1</code> 可以访问存档数据的命名空间1中的变量1</li>
+</ul>
+<p>然后在如下脚本2中可以通过 <code v-pre>VG.存档数据.命名空间1.变量1</code> 来访问和使用脚本1中传递的数据。</p>
+<div class="language-lua line-numbers-mode" data-highlighter="prismjs" data-ext="lua"><pre v-pre><code><span class="line"><span class="token keyword">local</span> 梦旅 <span class="token operator">=</span> GalGame<span class="token punctuation">.</span>引擎<span class="token punctuation">:</span>创建人物<span class="token punctuation">(</span><span class="token string">'梦旅'</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">   梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是脚本数据传递2.lua'</span><span class="token punctuation">)</span></span>
+<span class="line">   梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span>VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>命名空间<span class="token number">1.</span>变量<span class="token number">1</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line">   <span class="token keyword">return</span></span>
+<span class="line"><span class="token keyword">end</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里打印的就是 <code v-pre>VG.存档数据.命名空间1.变量1</code> 的值，即 <code v-pre>'VG.存档数据.命名空间1.变量1的值'</code></p>
+<h4 id="读取剧情选择结果" tabindex="-1"><a class="header-anchor" href="#读取剧情选择结果"><span>读取剧情选择结果</span></a></h4>
+<div class="language-lua line-numbers-mode" data-highlighter="prismjs" data-ext="lua"><pre v-pre><code><span class="line"><span class="token keyword">local</span> 梦旅 <span class="token operator">=</span> VG<span class="token punctuation">:</span>创建人物<span class="token punctuation">(</span><span class="token string">'梦旅'</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是一个Galgame游戏脚本初始化模版'</span><span class="token punctuation">)</span></span>
+<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你可以在这里添加剧情内容1'</span><span class="token punctuation">)</span></span>
+<span class="line">  VG<span class="token punctuation">:</span>剧情选择<span class="token punctuation">(</span><span class="token string">'分支1'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'选择1'</span><span class="token punctuation">,</span><span class="token string">'选择2'</span><span class="token punctuation">}</span><span class="token punctuation">)</span></span>
+<span class="line">  </span>
+<span class="line">  <span class="token comment">-- 通过 VG.存档数据.  + 剧情选择这个命名空间 + 剧情选择名称  可以跨脚本读取剧情选择结果 </span></span>
+<span class="line">   梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span>VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>剧情选择<span class="token punctuation">.</span>分支<span class="token number">1</span><span class="token punctuation">)</span></span>
+<span class="line">  <span class="token keyword">return</span></span>
+<span class="line"><span class="token keyword">end</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过 <code v-pre>VG.存档数据.剧情选择</code> 这个特定的命名空间可以访问读取剧情选择的结果</p>
+<ul>
+<li>通过 <code v-pre>VG.存档数据.剧情选择.分支1</code> 可以访问分支1的选择结果</li>
+</ul>
+<h4 id="读取玩家输入结果" tabindex="-1"><a class="header-anchor" href="#读取玩家输入结果"><span>读取玩家输入结果</span></a></h4>
+<div class="language-lua line-numbers-mode" data-highlighter="prismjs" data-ext="lua"><pre v-pre><code><span class="line"><span class="token keyword">local</span> 梦旅 <span class="token operator">=</span> VG<span class="token punctuation">:</span>创建人物<span class="token punctuation">(</span><span class="token string">'梦旅'</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'这是一个Galgame游戏脚本初始化模版'</span><span class="token punctuation">)</span></span>
+<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你可以在这里添加剧情内容'</span><span class="token punctuation">)</span></span>
+<span class="line">  VG<span class="token punctuation">:</span>获取输入<span class="token punctuation">(</span><span class="token string">'输入1'</span><span class="token punctuation">,</span><span class="token string">"输入标题"</span><span class="token punctuation">,</span><span class="token string">'按钮文本'</span><span class="token punctuation">)</span></span>
+<span class="line">  梦旅<span class="token punctuation">:</span>说<span class="token punctuation">(</span><span class="token string">'你输入的内容是：'</span> <span class="token operator">..</span> VG<span class="token punctuation">.</span>存档数据<span class="token punctuation">.</span>玩家输入<span class="token punctuation">.</span>输入<span class="token number">1</span><span class="token punctuation">)</span></span>
+<span class="line">  <span class="token keyword">return</span></span>
+<span class="line"><span class="token keyword">end</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过 <code v-pre>VG.存档数据.玩家输入</code> 这个特定的命名空间可以访问读取玩家输入的结果</p>
+<ul>
+<li>通过 <code v-pre>VG.存档数据.玩家输入.输入1</code> 可以访问<code v-pre>VG:获取输入('输入1',&quot;输入标题&quot;,'按钮文本')</code>的输入结果</li>
+</ul>
 </div></template>
 
 
